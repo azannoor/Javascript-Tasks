@@ -39,3 +39,15 @@ const {name:name3,age:Age3} = object3
 console.log(name1,Age1)
 console.log(name2,Age2)
 console.log(name3,Age3)
+
+
+// problem 4
+
+let str = 'hello'
+let reverse = ''
+console.log(str.length)
+
+for(let k = str.length-1;k>=0;k--){
+   reverse += str[k] 
+}
+console.log(reverse)
