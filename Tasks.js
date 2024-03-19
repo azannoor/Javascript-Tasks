@@ -61,3 +61,17 @@ for(let l = 0;l<=array1.length;l++){
    sum+=l
 }
 console.log(sum)
+
+//problem 6
+
+let array2 = [2,1,3,5,8,9]
+let temp;
+
+for(let i=0;i<=array2.length;i++){
+   for(let j= 0;j<=array2.length;j++){
+    if(array2[i]>array2[j]){
+        temp = array2[i]
+    }
+   }
+   
+}
