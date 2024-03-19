@@ -9,3 +9,13 @@ const check = function(num){
     }
     
     }
+
+    // problem 2
+
+const factorial = function(num1){
+    let temp = 1
+    for(let i = 1;i<=num1;i++){
+        temp*= i; 
+    }
+    return temp
+    }
