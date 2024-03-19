@@ -51,3 +51,13 @@ for(let k = str.length-1;k>=0;k--){
    reverse += str[k] 
 }
 console.log(reverse)
+
+//problem 5
+
+let array1 = [1,2,3,4,5]
+let sum=0;
+
+for(let l = 0;l<=array1.length;l++){
+   sum+=l
+}
+console.log(sum)
