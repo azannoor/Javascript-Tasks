@@ -105,3 +105,35 @@ else{
 fibonacci(6)
 
 //problem 9
+
+let word = 'PAkistan'
+let count = 0
+
+for(let i = 0;i<word.length;i++){
+    if(word[i] == 'a' || word[i] == 'A'|| word[i] == 'e' || word[i] == 'E' 
+    || word[i] == 'i' || word[i] == 'I' || word[i] == 'O' || word[i] == 'o' || word[i] == 'u' || word[i] == 'U'){
+        count++
+    }
+}
+
+console.log(count)
+
+//problem 10
+
+let sorted = [9,3,4,10,1,5]
+let temp1
+
+for(let a=0;a<sorted.length;a++){
+    
+    for(let b=0;b<sorted.length;b++){
+
+        if(sorted[a]<sorted[b]){
+            temp1 = sorted[a]
+            sorted[a] = sorted[b]
+            sorted[b] = temp1
+            
+        }
+    }
+    
+} 
+console.log(sorted)
