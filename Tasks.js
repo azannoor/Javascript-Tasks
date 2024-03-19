@@ -87,3 +87,21 @@ const leap = function(year){
     }
 }
 leap(2024)
+
+//problem 8 
+
+let series = [0,1,1,2,3,5,8]
+
+const fibonacci = function(index){
+    let temp = series[index-1] + series[index - 2]
+if(series[index]==temp){
+    console.log(`${series[index]} is a Fibonacci number`)
+}
+else{
+    console.log(`${series[index]} is not a Fibonacci number`)
+}
+}
+
+fibonacci(6)
+
+//problem 9
