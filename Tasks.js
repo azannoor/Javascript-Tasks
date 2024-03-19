@@ -75,3 +75,15 @@ for(let i=0;i<=array2.length;i++){
    }
    
 }
+
+//problem 7
+
+const leap = function(year){
+    if(year%4===0 && year%100 !==0 ){
+        console.log(`${year} is a leap year`)
+    }
+    else{
+        console.log(`${year} is not a leap year`)
+    }
+}
+leap(2024)
