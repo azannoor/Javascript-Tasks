@@ -147,5 +147,30 @@ let mutable = {
     age:'2'
 }
 immutable(mutable)
-
 console.log(mutable)
+
+// featch data
+
+let myPromise = new Promise(function(resolve,reject){
+let x = fetch("https://dummyjson.com/products/1").then(response =>{
+    return response.json()
+   
+
+}).then(data => {
+    return console.log(data)
+})
+if(x){
+    resolve('data fetched successfully')
+}
+else{
+    reject('fetching unsucessfull')
+}
+})
+
+myPromise.then((message)=>{
+
+    console.log(message)
+
+}).catch((err)=>{
+console.log(err)
+})
