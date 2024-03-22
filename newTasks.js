@@ -152,19 +152,22 @@ console.log(mutable)
 // featch data
 
 let myPromise = new Promise(function(resolve,reject){
-let x = fetch("https://dummyjson.com/products/1").then(response =>{
-    return response.json()
-   
 
-}).then(data => {
-    return console.log(data)
+ let fetch1 = fetch("https://dummyjson.com/products/1")
+
+fetch1.then(response =>{
+    return response.json()
+
 })
-if(x){
+.then(data => {
     resolve('data fetched successfully')
-}
-else{
-    reject('fetching unsucessfull')
-}
+    console.log(data)
+   
+}).catch(err=>{
+    console.log(err)
+    reject('fetching unsuccessfull')
+})
+
 })
 
 myPromise.then((message)=>{
@@ -174,3 +177,38 @@ myPromise.then((message)=>{
 }).catch((err)=>{
 console.log(err)
 })
+
+// call back and delay
+
+const hello = function(){
+     console.log('hello')
+}
+
+const delayedGreeting = function(callback,seconds){
+setInterval(callback,seconds)
+}
+
+//delayedGreeting(hello,1000)
+
+
+// sumArray
+
+const sumArray = function(array){
+return array.reduce((acc,num)=>{
+    return acc+num
+})
+}
+console.log(sumArray([1,2,3,4]))
+
+// deep copy
+
+const deepCopy = function(object){
+const deep = JSON.parse(JSON.stringify(object))
+deep.a = 6
+deep.b.c= 7
+return deep
+}
+
+const originalObject = { a: 1, b: { c: 2 } };
+console.log(deepCopy(originalObject))
+console.log(originalObject)
