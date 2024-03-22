@@ -54,5 +54,73 @@ const hasUniqueCharacters = function(string){
 console.log(final)
 
 
-//
+//Anagram
 
+const isAnagram = function(string1,string2){
+    let stringOne={}
+    let stringTwo={}
+
+for(let i=0;i<string1.length;i++){
+   let c = string1.charAt(i)
+   if(stringOne[c]){
+    stringOne[c]++
+   }else{
+    stringOne[c] = 1
+   }
+}
+for(let i=0;i<string2.length;i++){
+    let c = string2.charAt(i)
+    if(stringTwo[c]){
+     stringTwo[c]++
+    }else{
+     stringTwo[c] = 1
+    }
+ }
+
+   //console.log(stringOne)
+   //console.log(stringTwo)
+   for(let char in stringOne){
+      if(stringOne[char]!==stringTwo[char]){
+          console.log("not anagram")
+          return false
+      }
+      else{
+        console.log("is an anagram")
+        return true
+      }
+   //console.log(stringOne[char],stringTwo[char])
+   }
+}
+
+const final1 = isAnagram("silent","listen")
+console.log(final1)
+
+// balanced paranthesis
+
+const balanced = function(string){
+    let stack =  []
+
+    for(let i=0;i<string.length;i++){
+       let char = stack[stack.length -  1]
+
+       if(string[i]==='('||string[i]==='['||string[i]==='{'){
+        stack.push(string[i])
+       }
+       else if(char === '(' && string[i] === ')' || char === '{' && string[i] === '}' || char === '['  && string[i] === ']' ){
+        stack.pop(string[i])
+       }
+       else {
+        console.log("not balanced")
+        return false
+       }
+    } 
+   
+    console.log(stack)
+    if(stack.length === 0){
+        console.log("balanced")
+        return true
+    }
+}
+
+let fin = balanced('{{}}')
+console.log(fin)
