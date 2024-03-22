@@ -64,13 +64,13 @@ console.log(sum)
 
 //problem 6
 
-let array2 = [2,1,3,5,8,9]
+let arrayNum = [2,1,3,5,8,9]
 let temp;
 
-for(let i=0;i<=array2.length;i++){
-   for(let j= 0;j<=array2.length;j++){
-    if(array2[i]>array2[j]){
-        temp = array2[i]
+for(let i=0;i<=arrayNum.length;i++){
+   for(let j= 0;j<=arrayNum.length;j++){
+    if(arrayNum[i]>arrayNum[j]){
+        temp = arrayNum[i]
     }
    }
    
@@ -79,14 +79,14 @@ for(let i=0;i<=array2.length;i++){
 //problem 7
 
 const leap = function(year){
-    if(year%4===0 && year%100 !==0 ){
+    if(year%4===0  && year%100 !==0 || year%400 === 0){
         console.log(`${year} is a leap year`)
     }
     else{
         console.log(`${year} is not a leap year`)
     }
 }
-leap(2024)
+leap(2023)
 
 //problem 8 
 
@@ -102,7 +102,7 @@ else{
 }
 }
 
-fibonacci(6)
+fibonacci(10000)
 
 //problem 9
 
@@ -137,3 +137,68 @@ for(let a=0;a<sorted.length;a++){
     
 } 
 console.log(sorted)
+
+//problem 11
+
+
+let string = 'my name is azaan'
+
+let sentence = string.split(" ")
+let words,temp11
+
+
+for(let i = 0;i<sentence.length;i++){
+    word = sentence[i]
+    temp11 = word.replace(word[0],word[0].toUpperCase())
+    sentence[i] = temp11
+   
+}
+let newString = sentence.join(" ")
+console.log(newString)
+
+//problem 12
+
+
+let duplicateArray = [1,2,3,3,4]
+const remove = (duplicateArray)=>{
+    return duplicateArray.filter((element,index)=>{
+        console.log(duplicateArray.indexOf(element),index)
+        return duplicateArray.indexOf(element)  === index
+     })
+}
+console.log(remove(duplicateArray))
+
+//palidrome
+
+
+const checkPalindrome = function(string){
+    let length = string.length - 1
+for(let i=0;i<string.length;i++){
+    if(string[i] === string[length--]){
+        console.log("string is a palindrome")
+        
+    }
+    else{
+        console.log("string is not a palindrome")
+        break
+    }
+}
+}
+
+checkPalindrome("refer")
+
+// longest word
+
+let LongString = 'my name is azaan';
+
+let AllWords = LongString.split(" ");
+
+let longestWord = ''
+
+for (let i = 0; i < AllWords.length; i++) {
+   if(AllWords[i].length > longestWord.length){
+    longestWord = AllWords[i]
+   }
+}
+console.log(longestWord)
+
