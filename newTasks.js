@@ -17,3 +17,42 @@ const flatten = function(array){
 flatten([1,[9,[2,53]],6])
 console.log(nested)
 
+// unique
+
+const hasUniqueCharacters = function(string){
+
+    let temp={}
+    for(let i=0;i<string.length;i++){
+        let c = string.charAt(i)
+        console.log(c)
+        if(temp[c]){
+         temp[c]++
+        }
+        
+        else{
+         temp[c] = 1
+        }
+        
+     }
+
+     for(let char in temp){
+          if(temp[char]>1){
+            console.log("characters are not unique")
+            return false
+          }
+          else{
+            console.log("characters are unique")
+            return true
+          }
+     
+    
+}
+
+}
+
+ let final = hasUniqueCharacters("acedfgch")
+console.log(final)
+
+
+//
+
