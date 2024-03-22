@@ -122,5 +122,19 @@ const balanced = function(string){
     }
 }
 
-let fin = balanced('{{}}')
-console.log(fin)
+let final2 = balanced('{{}}')
+console.log(final2)
+
+// double map
+
+
+const doubleMap = function(array){
+    return array.map((arr)=>{
+        return arr * 2
+    })
+}
+
+console.log(doubleMap([1,2,3,4]))
+
+// immutable object
+
