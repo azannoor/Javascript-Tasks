@@ -138,3 +138,14 @@ console.log(doubleMap([1,2,3,4]))
 
 // immutable object
 
+const immutable = function(object){
+return Object.freeze(object)
+    
+}
+let mutable = {
+    name:'azaan',
+    age:'2'
+}
+immutable(mutable)
+
+console.log(mutable)
